@@ -9,7 +9,7 @@
 
 5.times do
   name = Faker::DragonBall.character
-  address = Faker::Address.street_address + Faker::Address.postcode + Faker::Address.city
+  address = Faker::Address.street_address + " " + Faker::Address.postcode +  " " + Faker::Address.city
   phone_number = Faker::PhoneNumber.phone_number
   category = %w(chinese italian japanese french belgian).sample
   Restaurant.create(name: name, address: address, phone_number:phone_number, category: category )

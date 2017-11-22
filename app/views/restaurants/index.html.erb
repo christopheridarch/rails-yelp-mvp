@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Restaurants</h1>
+  <div>
+   <% @restaurants.each do |restaurant|  %>
+    <div class="row">
+      <div class="cols-xs-12 col-md-6"><%= restaurant.name %></div>
+      <div class="cols-xs-12 col-md-6"><%= link_to "See details", restaurant, class: "btn btn-primary"%></div>
+    </div>
+   <% end  %>
+  </div>
+  <div>
+    <%= link_to "Add a Restaurant", new_restaurant_path %>
+  </div>
+
+</div>
